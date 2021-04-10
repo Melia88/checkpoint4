@@ -12,6 +12,7 @@ class WeathersService{
    
    let res = await sandboxApi.get('weather')
   //  console.log('Service weather', res);
+
   ProxyState.weather = res.data
   // console.log(res.data)
     

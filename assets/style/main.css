@@ -43,8 +43,16 @@
 }
 
 /* NOTE remove after use */
-* {
+/* * {
   outline: solid 1px red;
+} */
+/* My stuff below */
+
+body{
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 .weather-text{
@@ -79,7 +87,14 @@
   cursor: pointer;
 }
 
-
+.clock {
+  background-color: transparent;
+  color: whitesmoke;
+  font-family: "Lucida Console";
+  font-size: 3.5rem;
+  text-shadow: .75px .75px .75px  black;
+}
+/* My Stuff above */
 
 
 

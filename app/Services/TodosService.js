@@ -1,6 +1,7 @@
 import { sandboxApi } from "./AxiosService.js";
 import {ProxyState} from '../AppState.js'
 import Todo from "../Models/Todo.js";
+import NotificationService from "./NotificationsService.js";
 
 class TodosService{
 
@@ -45,6 +46,7 @@ async completedTodo(id) {
  async deleteTodo(id) {
 
    if(window.confirm('You Sure About That Delete?')){
+  //  if(NotificationService.confirmAction('Delete Todo?')){
     //  ask sandbox to delete based on an id
      await sandboxApi.delete('Melia/Todos/'+ id)
      

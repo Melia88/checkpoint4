@@ -12,6 +12,8 @@ class AppState extends EventEmitter {
   weather = null
 
   quotes = null
+
+  clock = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {

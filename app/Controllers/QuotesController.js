@@ -26,7 +26,7 @@ function _drawQuotes(){
 export default class QuotesController{
   constructor(){
     ProxyState.on('quotes', _drawQuotes)
-    console.log('from quotes controller');
+    // console.log('from quotes controller');
     this.getQuotes()
   }
 
