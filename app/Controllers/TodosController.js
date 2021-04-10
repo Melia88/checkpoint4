@@ -8,7 +8,7 @@ function _drawTodo() {
     template += `<p> ${todosLeft} / ${todoTotal} </p>`
   ProxyState.todos.forEach(t => template += t.Template)
   document.getElementById('todo').innerHTML = template
-  console.log('draw function');
+  // console.log('draw function');
 
 }
 
@@ -19,7 +19,7 @@ export default class TodosController {
     ProxyState.on("todos", _drawTodo);
     
 
-    console.log('Hi from controller');
+    // console.log('Hi from controller');
     this.getTodos()
 
   }

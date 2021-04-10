@@ -14,12 +14,12 @@
     <title>checkpoint4</title>
 </head>
 
-<body id="backgroundImage">
+<body>
     <header>
     </header>
 
     <main class="container-fluid">
-        <!-- 3-col row -->
+        
         <div class="row">
             <div class="col-3 min-vh-100">
             </div>
@@ -30,13 +30,14 @@
                     <div class="col d-flex justify-content-center align-items-end">quote</div>
                 </div>
             </div>
-<!-- weather / to-do card -->
+<!-- weather / to-do row -->
             <div class="col-3">
                 <div class="row flex-column min-vh-100">
-                    <div class="col d-flex justify-content-end align-items-start">weather</div>
-                    <div class="col d-flex justify-content-end align-items-end" id="todoBox">to-dos
-
-                        <div class="task-card shadow bg-white rounded">
+                <!-- Weather spot col -->
+                    <div class="col d-flex justify-content-end align-items-start" id="weather">weather</div>
+                <!-- ToDo card col -->
+                    <div class="col d-flex justify-content-end align-items-end" id="todoBox">
+                        <div class="task-card shadow bg-white rounded mb-4">
                             <div class="text-center ${this.color} p-2 d-flex justify-content-between">
                                 <div class="d-flex flex-column">
                                     <h3>Today</h3>
@@ -69,11 +70,11 @@
     </main>
 
 
-
+<!-- Script tags -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
 

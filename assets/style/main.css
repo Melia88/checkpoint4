@@ -47,6 +47,11 @@
   outline: solid 1px red;
 }
 
+.weather-text{
+  text-shadow: 1.5px 1.5px 1.5px  black;
+  font-size: larger;
+}
+
 
 html {
   font-family: sans-serif;

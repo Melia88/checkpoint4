@@ -6,7 +6,7 @@ class TodosService{
 
   constructor(){
 
-    console.log('hi from service')
+    // console.log('hi from service')
   }
 
  async addTodos(newTodo) {
@@ -19,7 +19,7 @@ class TodosService{
   }
   async getTodos(){
     let res = await sandboxApi.get('Melia/Todos')
-    console.log('Service response', res);
+    // console.log('Service response', res);
     ProxyState.todos = res.data.map(t => new Todo(t))
 
   }
@@ -32,12 +32,12 @@ async completedTodo(id) {
       await sandboxApi.put('Melia/Todos/'+ id, {completed: false})
       todoChecked.completed = false
     }
+    // then Put request to edit it on the API
     else {
       await sandboxApi.put('Melia/Todos/'+ id, {completed: true})
       todoChecked.completed = true
     }
 
-    // them Put request to edit it on the API
     ProxyState.todos = ProxyState.todos
   }
 
