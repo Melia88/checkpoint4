@@ -5,7 +5,7 @@ function _drawTodo() {
   let todoTotal = ProxyState.todos.length 
     let todosLeft = ProxyState.todos.filter(t => t.completed == false).length
     let template = ''
-    template += `<p> ${todosLeft} / ${todoTotal} </p>`
+    template += `<p class="text-center text-light"> ${todosLeft} / ${todoTotal} </p>`
   ProxyState.todos.forEach(t => template += t.Template)
   document.getElementById('todo').innerHTML = template
   // console.log('draw function');

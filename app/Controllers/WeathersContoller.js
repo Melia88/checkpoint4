@@ -5,11 +5,13 @@ function _drawWeather(){
   
   let template = ''
   let weatherTemp = ProxyState.weather.main.temp
+  let cityName = ProxyState.weather.name
 
   let toF = (weatherTemp - 32) * 5 / 9;
   let toc = (weatherTemp - 32) * 5 / 9;
 
-    template += /*html */ `<div class="weather-text mt-2 text-center text-light text-shadow" onclick="app.weatherscontroller."><p> ${weatherTemp} </p> 
+    template += /*html */ `<div class="cursor weather-text m-2 px-3 text-center text-light text-shadow" onclick="app.weatherscontroller."><p> ${weatherTemp} </p> 
+    <p class="city-text text-light text-center">${cityName}</p>
     
     </div>`
   document.getElementById('weather').innerHTML = template
@@ -18,7 +20,7 @@ function _drawWeather(){
 export default class WeathersController{
   constructor(){
     ProxyState.on('weather', _drawWeather)
-    console.log('from weathers controller')
+    // console.log('from weathers controller')
     this.getWeather()
   }
 

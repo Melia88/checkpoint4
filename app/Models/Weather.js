@@ -1,7 +1,7 @@
 export default class Weather{
- constructor({main, data}){
+ constructor({main, name}){
   this.main = main.temp 
-  this.city = data.name
+  this.city = name
  }
 
 

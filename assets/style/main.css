@@ -52,6 +52,36 @@
   font-size: larger;
 }
 
+.city-text{
+  text-shadow: 1.5px 1.5px 1.5px  black;
+  font-size: medium;
+}
+
+.quotes-text{
+  text-shadow: 1px 1px 1px  black;
+  font-size: large;
+}
+
+
+.hide {
+  display: none;
+}
+    
+.quotesContent:hover + .hide {
+  display: block;
+  color:rgba(48, 45, 45, 0.904);
+  text-shadow: 1px 1px 1px  whitesmoke;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+
+
+
 
 html {
   font-family: sans-serif;

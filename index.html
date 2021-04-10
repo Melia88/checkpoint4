@@ -23,11 +23,22 @@
         <div class="row">
             <div class="col-3 min-vh-100">
             </div>
-<!-- clock -->
+<!-- clock & quote-->
             <div class="col-6">
                 <div class="row flex-column min-vh-100">
                     <div class="col d-flex justify-content-center align-items-end">clock</div>
-                    <div class="col d-flex justify-content-center align-items-end">quote</div>
+            <!-- inject quotes  -->
+                    
+                    <div class="col d-flex justify-content-center align-items-end" id="quote">
+
+                        <!-- <div class="p-3 question" id="quotesContent">
+                            <div class="quotesContent"> ${quotesContent} </div> 
+                              <div class="hide answer pt-2 text-center">${author}</div>
+                        </div> -->
+
+
+
+                    </div>
                 </div>
             </div>
 <!-- weather / to-do row -->
@@ -37,8 +48,8 @@
                     <div class="col d-flex justify-content-end align-items-start" id="weather">weather</div>
                 <!-- ToDo card col -->
                     <div class="col d-flex justify-content-end align-items-end" id="todoBox">
-                        <div class="task-card shadow bg-white rounded mb-4">
-                            <div class="text-center ${this.color} p-2 d-flex justify-content-between">
+                        <div class="task-card shadow bg-dark rounded mb-4">
+                            <div class="text-center text-light ${this.color} p-2 d-flex justify-content-between">
                                 <div class="d-flex flex-column">
                                     <h3>Today</h3>
                                     <p id="todoCount"></p>
@@ -53,8 +64,8 @@
                                 <input type="text" name="addTodo" id="addTodo" class="form-control"
                                     placeholder="Add Item..." aria-describedby="helpId" minlength="3" maxlength="50"
                                     required>
-                                <button type="submit" class="btn btn-primary" title='Add Your ToDo Here'><i
-                                        class="fas fa-plus"></i></button>
+                                <button type="submit" class="btn btn-outline-sucess" title='Add Your ToDo Here'><i
+                                        class="fas fa-plus text-light"></i></button>
                             </form>
                         </div>
 
