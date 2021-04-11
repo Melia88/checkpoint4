@@ -8,7 +8,7 @@ function _drawQuotes(){
   template += /*html */ `
 
   <div class="p-3 question" id="quotesContent">
-          <div class="quotesContent quotes-text text-light"> ${quotesContent} </div> 
+          <div class="quotesContent quotes-text text-light"> "${quotesContent}" </div> 
     		<div class="hide answer pt-2 text-center"> ${author} 🖊️</div>
       </div>
      
