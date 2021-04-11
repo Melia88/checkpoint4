@@ -7,7 +7,7 @@ function _drawClock(){
 }
 export default class ClocksController{
   constructor(){
-    ProxyState.on('clocks', _drawClock)
+    ProxyState.on('clock', _drawClock)
     this.getClock()
   }
 

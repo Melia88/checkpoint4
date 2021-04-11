@@ -4,13 +4,14 @@ import { weathersService } from "../Services/WeathersService.js";
 function _drawWeather(){
   
   let template = ''
-  let weatherTemp = ProxyState.weather.main.temp
+  let weather = ProxyState.weather
+  let toC = Math.round(weather.main.temp - 273.15)
+  let toF = Math.round(((weather.main.temp - 273.15) * 1.8) + 32)
+
   let cityName = ProxyState.weather.name
 
-  let toF = (weatherTemp - 32) * 5 / 9;
-  let toc = (weatherTemp - 32) * 5 / 9;
 
-    template += /*html */ `<div class="cursor weather-text m-2 p-4 text-center text-light text-shadow" onclick="app.weatherscontroller."><p> ${weatherTemp} </p> 
+    template += /*html */ `<div class="cursor weather-text m-2 p-4 text-center text-light text-shadow" onclick="app.weathersController.getConvertedTemp(ProxyState.checked)"><p> ${toF}&#176;</p> 
     <p class="city-text text-light text-center">${cityName}</p>
     
     </div>`
@@ -22,6 +23,7 @@ export default class WeathersController{
     ProxyState.on('weather', _drawWeather)
     // console.log('from weathers controller')
     this.getWeather()
+    this.getConvertedTemp()
   }
 
   async getWeather(){
@@ -30,5 +32,13 @@ export default class WeathersController{
     } catch (error) {
       console.error(error);
     }
+  }
+
+ async getConvertedTemp(checked){
+  try {
+    await weathersService.getConvertedTemp(checked)
+  } catch (error) {
+    console.error(error);
+  }
   }
 }
