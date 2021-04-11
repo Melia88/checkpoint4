@@ -11,13 +11,15 @@ function _drawWeather(){
   let cityName = ProxyState.weather.name
 
 
-    template += /*html */ `<div class="cursor weather-text m-2 p-4 text-center text-light text-shadow" onclick="app.weathersController.getConvertedTemp(ProxyState.checked)"><p> ${toF}&#176;</p> 
+    template += /*html */ `<div class="cursor weather-text m-2 p-4 text-center text-light text-shadow" onclick="app.weathersController.getConvertedTemp()"><p> ${toF}&#176; </p> 
     <p class="city-text text-light text-center">${cityName}</p>
-    
-    </div>`
+        
+     </div>`
   document.getElementById('weather').innerHTML = template
 }
 
+// <button onclick="getConvertedTemp()">Click Me</button> 
+// ${toF}&#176;
 export default class WeathersController{
   constructor(){
     ProxyState.on('weather', _drawWeather)
@@ -34,9 +36,9 @@ export default class WeathersController{
     }
   }
 
- async getConvertedTemp(checked){
+ async getConvertedTemp(){
   try {
-    await weathersService.getConvertedTemp(checked)
+    await weathersService.getConvertedTemp()
   } catch (error) {
     console.error(error);
   }

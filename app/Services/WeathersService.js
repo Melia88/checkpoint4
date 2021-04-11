@@ -18,18 +18,11 @@ class WeathersService{
     
   }
  
-  getConvertedTemp(checked){
-    let weather = ProxyState.weather
-    let toC = Math.round(weather- 273.15)
-    let toF = Math.round(((weather - 273.15) * 1.8) + 32)
-  
-    if(ProxyState.weather != checked){
-      toF
-    } else {
-      toC
-    }
-  }
+  getConvertedTemp(){
+    // if(){
 
+    // }
+  }
 }
 
 export const weathersService = new WeathersService();

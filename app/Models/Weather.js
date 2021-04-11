@@ -6,8 +6,8 @@ export default class Weather{
   this.city = name
   this.checked = checked
 
-  // this.toF = Math.floor(((main.temp - 273.15) * 1.8) + 32)  
-  // this.toC = Math.floor(main.temp - 273.15)
+  this.toF = Math.floor(((main.temp - 273.15) * 1.8) + 32)  
+  this.toC = Math.floor(main.temp - 273.15)
 
  }
 
