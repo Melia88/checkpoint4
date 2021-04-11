@@ -3,19 +3,19 @@ import { weathersService } from "../Services/WeathersService.js";
 
 function _drawWeather(){
   
-  let template = ''
+  // let template = ''
   let weather = ProxyState.weather
-  let toC = Math.round(weather.main.temp - 273.15)
-  let toF = Math.round(((weather.main.temp - 273.15) * 1.8) + 32)
+  // let toC = Math.round(weather.main.temp - 273.15)
+  // let toF = Math.round(((weather.main.temp - 273.15) * 1.8) + 32)
 
-  let cityName = ProxyState.weather.name
+  // let cityName = ProxyState.weather.name
 
 
-    template += /*html */ `<div class="cursor weather-text m-2 p-4 text-center text-light text-shadow" onclick="app.weathersController.getConvertedTemp()"><p> ${toF}&#176; </p> 
-    <p class="city-text text-light text-center">${cityName}</p>
+    // template += /*html */ `<div class="cursor weather-text m-2 p-4 text-center text-light text-shadow" onclick="app.weathersController.getConvertedTemp()"><p> ${toF}&#176; </p> 
+    // <p class="city-text text-light text-center">${cityName}</p>
         
-     </div>`
-  document.getElementById('weather').innerHTML = template
+    //  </div>`
+  document.getElementById('weather').innerHTML = weather.Template
 }
 
 // <button onclick="getConvertedTemp()">Click Me</button> 
@@ -25,7 +25,7 @@ export default class WeathersController{
     ProxyState.on('weather', _drawWeather)
     // console.log('from weathers controller')
     this.getWeather()
-    this.getConvertedTemp()
+    // this.getConvertedTemp()
   }
 
   async getWeather(){

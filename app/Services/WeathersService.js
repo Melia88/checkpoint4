@@ -13,16 +13,21 @@ class WeathersService{
    let res = await sandboxApi.get('weather')
   //  console.log('Service weather', res);
 
-  ProxyState.weather = res.data
+  ProxyState.weather = new Weather(res.data)
   // console.log(res.data)
     
   }
  
   getConvertedTemp(){
-    // if(){
-
-    // }
+    let weather = ProxyState.weather
+    if(weather.clicked == true){
+      weather.clicked = false
+    }else{
+      weather.clicked = true
+    }
+    ProxyState.weather = ProxyState.weather
   }
 }
+
 
 export const weathersService = new WeathersService();

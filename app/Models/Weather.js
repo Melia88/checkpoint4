@@ -1,22 +1,22 @@
 import { ProxyState } from "../AppState.js"
 
 export default class Weather{
- constructor({main, name, checked}){
+ constructor({main, name}){
   this.main = main.temp 
   this.city = name
-  this.checked = checked
+  this.clicked = true
 
   this.toF = Math.floor(((main.temp - 273.15) * 1.8) + 32)  
   this.toC = Math.floor(main.temp - 273.15)
 
  }
 
-//  get Template(){
-//    return `<div class="cursor weather-text m-2 p-4 text-center text-light text-shadow" onclick="app.weathersController.getWeather(checked)" ${this.checked ? this.toF : this.toC }><p> ${ProxyState.weather.Temp} </p> 
-//    <p class="city-text text-light text-center">${this.city}</p>
+ get Template(){
+   return `<div class="cursor weather-text m-2 p-4 text-center text-light text-shadow" onclick="app.weathersController.getConvertedTemp()"><p> ${this.clicked ? this.toF + '&#176;F' : this.toC+'&#176;C'} </p> 
+   <p class="city-text text-light text-center">${this.city}</p>
    
-//    </div>`
-//  }
+   </div>`
+ }
 
  
 
