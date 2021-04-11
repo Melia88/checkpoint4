@@ -77,10 +77,14 @@ body{
     
 .quotesContent:hover + .hide {
   display: block;
-  color:rgba(48, 45, 45, 0.904);
-  text-shadow: 1px 1px 1px  whitesmoke;
+  background-color: rgba(128, 128, 128, 0.514);
+  border-radius: 50px 50px 50px 50px;
+  color: rgb(255, 255, 255);
+  /* color:rgba(48, 45, 45, 0.904); */
+  /* text-shadow: 1px 1px 1px  whitesmoke; */
   font-size: medium;
-  font-weight: bold;
+  font-family: cursive;
+  font-style: italic;
 }
 
 .cursor{
@@ -93,6 +97,11 @@ body{
   font-family: "Lucida Console";
   font-size: 3.5rem;
   text-shadow: .75px .75px .75px  black;
+}
+
+.task-card{
+  background-color: rgba(128, 128, 128, 0.514);
+  border-radius: 50px 15px;
 }
 /* My Stuff above */
 
