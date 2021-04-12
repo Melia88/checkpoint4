@@ -96,6 +96,7 @@ body{
   color: whitesmoke;
   font-family: "Lucida Console";
   font-size: 3.5rem;
+  font-weight: bold;
   text-shadow: .75px .75px .75px  black;
 }
 
