@@ -20,6 +20,8 @@ class WeathersService{
  
   getConvertedTemp(){
     let weather = ProxyState.weather
+ 
+
     if(weather.clicked == true){
       weather.clicked = false
     }else{
@@ -28,6 +30,12 @@ class WeathersService{
     ProxyState.weather = ProxyState.weather
   }
 }
+// In ternery form
+// async getConvertedTemp(){
+//   let weather = ProxyState.weather
+//   ProxyState.weather.clicked ? weather.clicked= false : weather.clicked = true
+//   ProxyState.weather = ProxyState.weather
+// }
 
 
 export const weathersService = new WeathersService();
