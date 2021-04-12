@@ -45,8 +45,8 @@ async completedTodo(id) {
 
  async deleteTodo(id) {
 
-   if(window.confirm('You Sure About That Delete?')){
-  //  if(NotificationService.confirmAction('Delete Todo?')){
+  //  if(window.confirm('You Sure About That Delete?')){
+   if(await NotificationService.confirmAction('Delete Todo?')){
     //  ask sandbox to delete based on an id
      await sandboxApi.delete('Melia/Todos/'+ id)
      
